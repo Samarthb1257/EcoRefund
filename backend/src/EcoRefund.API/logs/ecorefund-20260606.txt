@@ -1,0 +1,737 @@
+2026-06-06 11:57:39.413 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.468 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.470 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.470 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.540 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 11:57:39.540 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 11:57:39.966 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.966 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.966 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.966 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:57:39.979 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 11:57:39.980 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 11:58:54.863 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:58:54.891 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:58:54.891 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:58:54.891 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 11:58:54.927 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 11:58:54.928 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 11:58:55.384 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 11:58:55.431 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-06 11:58:55.434 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 11:58:55.555 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2026-06-06 11:58:55.556 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 11:58:55.558 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-06 11:58:55.571 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-06-06 11:58:55.580 +05:30 [INF] Applying migration '20260606062740_InitialCreate'.
+2026-06-06 11:58:55.653 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Organizations] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrganizationCode] nvarchar(20) NOT NULL,
+    [OrganizationName] nvarchar(200) NOT NULL,
+    [OrganizationType] int NOT NULL,
+    [Address] nvarchar(500) NOT NULL,
+    [City] nvarchar(100) NOT NULL,
+    [State] nvarchar(100) NOT NULL,
+    [PinCode] nvarchar(10) NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Phone] nvarchar(20) NOT NULL,
+    [GstNumber] nvarchar(20) NULL,
+    [LogoUrl] nvarchar(max) NULL,
+    [Website] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [IsLoginEnabled] bit NOT NULL,
+    [SubscriptionPlan] int NOT NULL,
+    [SubscriptionExpiresAt] datetime2 NULL,
+    [MaxLocations] int NOT NULL,
+    [MaxUsers] int NOT NULL,
+    [MaxQrPerDay] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    CONSTRAINT [PK_Organizations] PRIMARY KEY ([Id])
+);
+2026-06-06 11:58:55.659 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ItemTypes] (
+    [Id] uniqueidentifier NOT NULL,
+    [TypeName] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [DefaultDepositAmount] decimal(18,2) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [IconUrl] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_ItemTypes] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ItemTypes_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE
+);
+2026-06-06 11:58:55.663 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Locations] (
+    [Id] uniqueidentifier NOT NULL,
+    [LocationName] nvarchar(max) NOT NULL,
+    [LocationType] int NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Locations] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Locations_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE
+);
+2026-06-06 11:58:55.682 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrganizationId] uniqueidentifier NULL,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(20) NULL,
+    [Role] int NOT NULL,
+    [IsActive] bit NOT NULL,
+    [IsLoginEnabled] bit NOT NULL,
+    [ProfileImageUrl] nvarchar(max) NULL,
+    [RefreshToken] nvarchar(512) NULL,
+    [RefreshTokenExpiryTime] datetime2 NULL,
+    [LastLoginAt] datetime2 NULL,
+    [LastLoginIp] nvarchar(max) NULL,
+    [FailedLoginAttempts] int NOT NULL,
+    [LockoutUntil] datetime2 NULL,
+    [AssignedLocationId] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_Locations_AssignedLocationId] FOREIGN KEY ([AssignedLocationId]) REFERENCES [Locations] ([Id]) ON DELETE SET NULL,
+    CONSTRAINT [FK_Users_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION
+);
+2026-06-06 11:58:55.705 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AuditLogs] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrganizationId] uniqueidentifier NULL,
+    [UserId] uniqueidentifier NULL,
+    [Action] nvarchar(max) NOT NULL,
+    [EntityType] nvarchar(max) NOT NULL,
+    [EntityId] nvarchar(max) NULL,
+    [OldValues] nvarchar(max) NULL,
+    [NewValues] nvarchar(max) NULL,
+    [IpAddress] nvarchar(max) NULL,
+    [UserAgent] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [IsSuccess] bit NOT NULL,
+    [ErrorMessage] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_AuditLogs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AuditLogs_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]),
+    CONSTRAINT [FK_AuditLogs_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2026-06-06 11:58:55.726 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [QrCodes] (
+    [Id] uniqueidentifier NOT NULL,
+    [QrCodeNumber] nvarchar(50) NOT NULL,
+    [QrCodeData] nvarchar(max) NOT NULL,
+    [QrImageBase64] nvarchar(max) NULL,
+    [Status] int NOT NULL,
+    [GeneratedByUserId] uniqueidentifier NOT NULL,
+    [GeneratedAt] datetime2 NOT NULL,
+    [ActivatedAt] datetime2 NULL,
+    [RedeemedAt] datetime2 NULL,
+    [ExpiresAt] datetime2 NULL,
+    [RedemptionNotes] nvarchar(max) NULL,
+    [RedeemedByUserId] uniqueidentifier NULL,
+    [ScanAttemptCount] int NOT NULL,
+    [RedeemedById] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_QrCodes] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_QrCodes_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_QrCodes_Users_GeneratedByUserId] FOREIGN KEY ([GeneratedByUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_QrCodes_Users_RedeemedById] FOREIGN KEY ([RedeemedById]) REFERENCES [Users] ([Id])
+);
+2026-06-06 11:58:55.742 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Items] (
+    [Id] uniqueidentifier NOT NULL,
+    [ItemTypeId] uniqueidentifier NOT NULL,
+    [LocationId] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [RegisteredByUserId] uniqueidentifier NOT NULL,
+    [ItemNumber] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [DepositAmount] decimal(18,2) NOT NULL,
+    [Status] int NOT NULL,
+    [RegisteredAt] datetime2 NOT NULL,
+    [ReturnedAt] datetime2 NULL,
+    [ExpiresAt] datetime2 NULL,
+    [Notes] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Items] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Items_ItemTypes_ItemTypeId] FOREIGN KEY ([ItemTypeId]) REFERENCES [ItemTypes] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_Locations_LocationId] FOREIGN KEY ([LocationId]) REFERENCES [Locations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_Users_RegisteredByUserId] FOREIGN KEY ([RegisteredByUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
+);
+2026-06-06 11:58:55.765 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScanAttempts] (
+    [Id] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [ScannedByUserId] uniqueidentifier NULL,
+    [Result] int NOT NULL,
+    [IpAddress] nvarchar(max) NULL,
+    [DeviceInfo] nvarchar(max) NULL,
+    [Notes] nvarchar(max) NULL,
+    [ScannedAt] datetime2 NOT NULL,
+    [ScannedById] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_ScanAttempts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ScanAttempts_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScanAttempts_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScanAttempts_Users_ScannedById] FOREIGN KEY ([ScannedById]) REFERENCES [Users] ([Id])
+);
+2026-06-06 11:58:55.784 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Deposits] (
+    [Id] uniqueidentifier NOT NULL,
+    [ItemId] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [CollectedByUserId] uniqueidentifier NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [PaymentMethod] nvarchar(max) NOT NULL,
+    [TransactionReference] nvarchar(max) NULL,
+    [CollectedAt] datetime2 NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [CollectedById] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Deposits] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Deposits_Items_ItemId] FOREIGN KEY ([ItemId]) REFERENCES [Items] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Deposits_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Deposits_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Deposits_Users_CollectedById] FOREIGN KEY ([CollectedById]) REFERENCES [Users] ([Id])
+);
+2026-06-06 11:58:55.865 +05:30 [ERR] Failed executing DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Refunds] (
+    [Id] uniqueidentifier NOT NULL,
+    [ItemId] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [DepositId] uniqueidentifier NOT NULL,
+    [ProcessedByUserId] uniqueidentifier NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [RefundMethod] int NOT NULL,
+    [TransactionReference] nvarchar(100) NULL,
+    [UpiId] nvarchar(100) NULL,
+    [CouponCode] nvarchar(50) NULL,
+    [ProcessedAt] datetime2 NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [IsApproved] bit NOT NULL,
+    [ApprovedByUserId] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Refunds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Refunds_Deposits_DepositId] FOREIGN KEY ([DepositId]) REFERENCES [Deposits] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Refunds_Items_ItemId] FOREIGN KEY ([ItemId]) REFERENCES [Items] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Refunds_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Refunds_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Refunds_Users_ProcessedByUserId] FOREIGN KEY ([ProcessedByUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
+);
+2026-06-06 12:00:11.635 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.664 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.665 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.665 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.703 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:11.703 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:11.884 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.884 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.884 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.884 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:11.890 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:11.890 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:12.594 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 12:00:12.633 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-06 12:00:12.652 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-06-06 12:00:23.161 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:23.196 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:23.197 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:23.197 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:23.236 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:23.236 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:23.488 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 12:00:26.590 +05:30 [INF] Executed DbCommand (3,074ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Ecorefund] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2026-06-06 12:00:26.821 +05:30 [INF] Executed DbCommand (230ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+DROP DATABASE [Ecorefund];
+2026-06-06 12:00:36.987 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.015 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.016 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.016 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.054 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:37.054 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:37.240 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.241 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.241 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.241 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:37.246 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:37.246 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:48.361 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.386 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.387 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.387 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.424 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:48.424 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:48.769 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.770 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.770 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.770 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-06 12:00:48.776 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:48.776 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-06 12:00:49.280 +05:30 [INF] Executed DbCommand (456ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Ecorefund];
+2026-06-06 12:00:49.351 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Ecorefund] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-06-06 12:00:49.366 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 12:00:49.427 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2026-06-06 12:00:49.429 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-06 12:00:49.450 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-06 12:00:49.456 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-06-06 12:00:49.465 +05:30 [INF] Applying migration '20260606063037_InitialCreate'.
+2026-06-06 12:00:49.525 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Organizations] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrganizationCode] nvarchar(20) NOT NULL,
+    [OrganizationName] nvarchar(200) NOT NULL,
+    [OrganizationType] int NOT NULL,
+    [Address] nvarchar(500) NOT NULL,
+    [City] nvarchar(100) NOT NULL,
+    [State] nvarchar(100) NOT NULL,
+    [PinCode] nvarchar(10) NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Phone] nvarchar(20) NOT NULL,
+    [GstNumber] nvarchar(20) NULL,
+    [LogoUrl] nvarchar(max) NULL,
+    [Website] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [IsLoginEnabled] bit NOT NULL,
+    [SubscriptionPlan] int NOT NULL,
+    [SubscriptionExpiresAt] datetime2 NULL,
+    [MaxLocations] int NOT NULL,
+    [MaxUsers] int NOT NULL,
+    [MaxQrPerDay] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    CONSTRAINT [PK_Organizations] PRIMARY KEY ([Id])
+);
+2026-06-06 12:00:49.532 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ItemTypes] (
+    [Id] uniqueidentifier NOT NULL,
+    [TypeName] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [DefaultDepositAmount] decimal(18,2) NOT NULL,
+    [IsActive] bit NOT NULL,
+    [IconUrl] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_ItemTypes] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ItemTypes_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE
+);
+2026-06-06 12:00:49.535 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Locations] (
+    [Id] uniqueidentifier NOT NULL,
+    [LocationName] nvarchar(max) NOT NULL,
+    [LocationType] int NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [IsActive] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Locations] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Locations_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE
+);
+2026-06-06 12:00:49.540 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrganizationId] uniqueidentifier NULL,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Phone] nvarchar(20) NULL,
+    [Role] int NOT NULL,
+    [IsActive] bit NOT NULL,
+    [IsLoginEnabled] bit NOT NULL,
+    [ProfileImageUrl] nvarchar(max) NULL,
+    [RefreshToken] nvarchar(512) NULL,
+    [RefreshTokenExpiryTime] datetime2 NULL,
+    [LastLoginAt] datetime2 NULL,
+    [LastLoginIp] nvarchar(max) NULL,
+    [FailedLoginAttempts] int NOT NULL,
+    [LockoutUntil] datetime2 NULL,
+    [AssignedLocationId] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Users_Locations_AssignedLocationId] FOREIGN KEY ([AssignedLocationId]) REFERENCES [Locations] ([Id]) ON DELETE SET NULL,
+    CONSTRAINT [FK_Users_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION
+);
+2026-06-06 12:00:49.543 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AuditLogs] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrganizationId] uniqueidentifier NULL,
+    [UserId] uniqueidentifier NULL,
+    [Action] nvarchar(max) NOT NULL,
+    [EntityType] nvarchar(max) NOT NULL,
+    [EntityId] nvarchar(max) NULL,
+    [OldValues] nvarchar(max) NULL,
+    [NewValues] nvarchar(max) NULL,
+    [IpAddress] nvarchar(max) NULL,
+    [UserAgent] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    [IsSuccess] bit NOT NULL,
+    [ErrorMessage] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_AuditLogs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AuditLogs_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]),
+    CONSTRAINT [FK_AuditLogs_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2026-06-06 12:00:49.546 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [QrCodes] (
+    [Id] uniqueidentifier NOT NULL,
+    [QrCodeNumber] nvarchar(50) NOT NULL,
+    [QrCodeData] nvarchar(max) NOT NULL,
+    [QrImageBase64] nvarchar(max) NULL,
+    [Status] int NOT NULL,
+    [GeneratedByUserId] uniqueidentifier NOT NULL,
+    [GeneratedAt] datetime2 NOT NULL,
+    [ActivatedAt] datetime2 NULL,
+    [RedeemedAt] datetime2 NULL,
+    [ExpiresAt] datetime2 NULL,
+    [RedemptionNotes] nvarchar(max) NULL,
+    [RedeemedByUserId] uniqueidentifier NULL,
+    [ScanAttemptCount] int NOT NULL,
+    [RedeemedById] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_QrCodes] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_QrCodes_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_QrCodes_Users_GeneratedByUserId] FOREIGN KEY ([GeneratedByUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_QrCodes_Users_RedeemedById] FOREIGN KEY ([RedeemedById]) REFERENCES [Users] ([Id])
+);
+2026-06-06 12:00:49.551 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Items] (
+    [Id] uniqueidentifier NOT NULL,
+    [ItemTypeId] uniqueidentifier NOT NULL,
+    [LocationId] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [RegisteredByUserId] uniqueidentifier NOT NULL,
+    [ItemNumber] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [DepositAmount] decimal(18,2) NOT NULL,
+    [Status] int NOT NULL,
+    [RegisteredAt] datetime2 NOT NULL,
+    [ReturnedAt] datetime2 NULL,
+    [ExpiresAt] datetime2 NULL,
+    [Notes] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Items] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Items_ItemTypes_ItemTypeId] FOREIGN KEY ([ItemTypeId]) REFERENCES [ItemTypes] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_Locations_LocationId] FOREIGN KEY ([LocationId]) REFERENCES [Locations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Items_Users_RegisteredByUserId] FOREIGN KEY ([RegisteredByUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
+);
+2026-06-06 12:00:49.554 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScanAttempts] (
+    [Id] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [ScannedByUserId] uniqueidentifier NULL,
+    [Result] int NOT NULL,
+    [IpAddress] nvarchar(max) NULL,
+    [DeviceInfo] nvarchar(max) NULL,
+    [Notes] nvarchar(max) NULL,
+    [ScannedAt] datetime2 NOT NULL,
+    [ScannedById] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_ScanAttempts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_ScanAttempts_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScanAttempts_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScanAttempts_Users_ScannedById] FOREIGN KEY ([ScannedById]) REFERENCES [Users] ([Id])
+);
+2026-06-06 12:00:49.558 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Deposits] (
+    [Id] uniqueidentifier NOT NULL,
+    [ItemId] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [CollectedByUserId] uniqueidentifier NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [PaymentMethod] nvarchar(max) NOT NULL,
+    [TransactionReference] nvarchar(max) NULL,
+    [CollectedAt] datetime2 NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [CollectedById] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Deposits] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Deposits_Items_ItemId] FOREIGN KEY ([ItemId]) REFERENCES [Items] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Deposits_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Deposits_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Deposits_Users_CollectedById] FOREIGN KEY ([CollectedById]) REFERENCES [Users] ([Id])
+);
+2026-06-06 12:00:49.566 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Refunds] (
+    [Id] uniqueidentifier NOT NULL,
+    [ItemId] uniqueidentifier NOT NULL,
+    [QrCodeId] uniqueidentifier NOT NULL,
+    [DepositId] uniqueidentifier NOT NULL,
+    [ProcessedByUserId] uniqueidentifier NOT NULL,
+    [Amount] decimal(18,2) NOT NULL,
+    [RefundMethod] int NOT NULL,
+    [TransactionReference] nvarchar(100) NULL,
+    [UpiId] nvarchar(100) NULL,
+    [CouponCode] nvarchar(50) NULL,
+    [ProcessedAt] datetime2 NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [IsApproved] bit NOT NULL,
+    [ApprovedByUserId] uniqueidentifier NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL,
+    [DeletedAt] datetime2 NULL,
+    [OrganizationId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Refunds] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Refunds_Deposits_DepositId] FOREIGN KEY ([DepositId]) REFERENCES [Deposits] ([Id]),
+    CONSTRAINT [FK_Refunds_Items_ItemId] FOREIGN KEY ([ItemId]) REFERENCES [Items] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Refunds_Organizations_OrganizationId] FOREIGN KEY ([OrganizationId]) REFERENCES [Organizations] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Refunds_QrCodes_QrCodeId] FOREIGN KEY ([QrCodeId]) REFERENCES [QrCodes] ([Id]),
+    CONSTRAINT [FK_Refunds_Users_ProcessedByUserId] FOREIGN KEY ([ProcessedByUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
+);
+2026-06-06 12:00:49.571 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AuditLogs_OrganizationId] ON [AuditLogs] ([OrganizationId]);
+2026-06-06 12:00:49.572 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AuditLogs_UserId] ON [AuditLogs] ([UserId]);
+2026-06-06 12:00:49.574 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Deposits_CollectedById] ON [Deposits] ([CollectedById]);
+2026-06-06 12:00:49.575 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Deposits_ItemId] ON [Deposits] ([ItemId]);
+2026-06-06 12:00:49.576 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Deposits_OrganizationId] ON [Deposits] ([OrganizationId]);
+2026-06-06 12:00:49.578 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Deposits_QrCodeId] ON [Deposits] ([QrCodeId]);
+2026-06-06 12:00:49.579 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Items_ItemTypeId] ON [Items] ([ItemTypeId]);
+2026-06-06 12:00:49.580 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Items_LocationId] ON [Items] ([LocationId]);
+2026-06-06 12:00:49.581 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Items_OrganizationId] ON [Items] ([OrganizationId]);
+2026-06-06 12:00:49.583 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Items_QrCodeId] ON [Items] ([QrCodeId]);
+2026-06-06 12:00:49.584 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Items_RegisteredByUserId] ON [Items] ([RegisteredByUserId]);
+2026-06-06 12:00:49.586 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ItemTypes_OrganizationId] ON [ItemTypes] ([OrganizationId]);
+2026-06-06 12:00:49.587 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Locations_OrganizationId] ON [Locations] ([OrganizationId]);
+2026-06-06 12:00:49.588 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Organizations_Email] ON [Organizations] ([Email]);
+2026-06-06 12:00:49.589 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Organizations_OrganizationCode] ON [Organizations] ([OrganizationCode]);
+2026-06-06 12:00:49.590 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_QrCodes_GeneratedByUserId] ON [QrCodes] ([GeneratedByUserId]);
+2026-06-06 12:00:49.591 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_QrCodes_OrganizationId_QrCodeNumber] ON [QrCodes] ([OrganizationId], [QrCodeNumber]);
+2026-06-06 12:00:49.592 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_QrCodes_RedeemedById] ON [QrCodes] ([RedeemedById]);
+2026-06-06 12:00:49.593 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Refunds_DepositId] ON [Refunds] ([DepositId]);
+2026-06-06 12:00:49.594 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Refunds_ItemId] ON [Refunds] ([ItemId]);
+2026-06-06 12:00:49.595 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Refunds_OrganizationId] ON [Refunds] ([OrganizationId]);
+2026-06-06 12:00:49.596 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Refunds_ProcessedByUserId] ON [Refunds] ([ProcessedByUserId]);
+2026-06-06 12:00:49.597 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Refunds_QrCodeId] ON [Refunds] ([QrCodeId]);
+2026-06-06 12:00:49.597 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScanAttempts_OrganizationId] ON [ScanAttempts] ([OrganizationId]);
+2026-06-06 12:00:49.598 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScanAttempts_QrCodeId] ON [ScanAttempts] ([QrCodeId]);
+2026-06-06 12:00:49.599 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScanAttempts_ScannedById] ON [ScanAttempts] ([ScannedById]);
+2026-06-06 12:00:49.600 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_AssignedLocationId] ON [Users] ([AssignedLocationId]);
+2026-06-06 12:00:49.601 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Users_Email] ON [Users] ([Email]);
+2026-06-06 12:00:49.602 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Users_OrganizationId] ON [Users] ([OrganizationId]);
+2026-06-06 12:00:49.616 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260606063037_InitialCreate', N'8.0.4');
+2026-06-06 12:08:16.553 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.DefaultAddressStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-06-06 12:13:33.567 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.DefaultAddressStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)

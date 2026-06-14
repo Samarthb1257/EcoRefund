@@ -1,0 +1,33 @@
+2026-06-14 11:41:04.918 +05:30 [WRN] Entity 'Item' has a global query filter defined and is the required end of a relationship with the entity 'Deposit'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-14 11:41:04.981 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ItemType'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-14 11:41:04.986 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'Location'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-14 11:41:04.991 +05:30 [WRN] Entity 'Organization' has a global query filter defined and is the required end of a relationship with the entity 'ScanAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2026-06-14 11:41:05.119 +05:30 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Deposit'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-14 11:41:05.124 +05:30 [WRN] No store type was specified for the decimal property 'DefaultDepositAmount' on entity type 'ItemType'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-14 11:41:09.577 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-14 11:41:09.681 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-14 11:41:09.694 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-06-14 11:41:09.705 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-06-14 11:41:09.751 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-06-14 11:41:09.794 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-06-14 11:41:10.687 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[IsDeleted] = CAST(0 AS bit) AND [u].[Role] = 1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-06-14 11:41:11.060 +05:30 [INF] User profile is available. Using 'C:\Users\91842\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-14 11:41:11.359 +05:30 [INF] Now listening on: http://localhost:5100
+2026-06-14 11:41:11.364 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-14 11:41:11.367 +05:30 [INF] Hosting environment: Development
+2026-06-14 11:41:11.370 +05:30 [INF] Content root path: C:\Users\91842\Desktop\All Folders\QR_Waste_Management_System\backend\src\EcoRefund.API
+2026-06-14 13:01:18.126 +05:30 [INF] Application is shutting down...

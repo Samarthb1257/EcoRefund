@@ -1,0 +1,85 @@
+version: '3.9'
+
+services:
+
+  # ── SQL Server 2022 ─────────────────────────────────────────────────────────
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ecorefund-sqlserver
+    environment:
+      SA_PASSWORD:  "EcoRefund@2024!"
+      ACCEPT_EULA:  "Y"
+      MSSQL_PID:    "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - ecorefund-net
+    restart: unless-stopped
+    healthcheck:
+      # SQL Server 2022 image ships tools at mssql-tools18
+      test: >
+        /opt/mssql-tools18/bin/sqlcmd
+        -S localhost -U SA -P "EcoRefund@2024!"
+        -Q "SELECT 1" -C -b
+        || /opt/mssql-tools/bin/sqlcmd
+        -S localhost -U SA -P "EcoRefund@2024!"
+        -Q "SELECT 1" -b
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 45s
+
+  # ── ASP.NET Core 8 API ──────────────────────────────────────────────────────
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ecorefund-api
+    environment:
+      # Development → triggers auto-migrate + SuperAdmin seed on first run
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: "http://+:80"
+      ConnectionStrings__DefaultConnection: >-
+        Server=sqlserver;Database=EcoRefundAI;
+        User Id=SA;Password=EcoRefund@2024!;
+        TrustServerCertificate=True;MultipleActiveResultSets=true
+      Jwt__SecretKey:    "EcoRefundAI-SuperSecret-JWT-Key-2024-MustBe32CharactersOrLonger!"
+      Jwt__Issuer:       "EcoRefundAI"
+      Jwt__Audience:     "EcoRefundAI"
+      Jwt__ExpiryHours:  "8"
+      # Allow frontend origin (port 3000) for CORS
+      AllowedOrigins__0: "http://localhost:3000"
+      AllowedOrigins__1: "http://localhost:5173"
+    ports:
+      - "5100:80"     # Swagger available at http://localhost:5100/swagger
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - ecorefund-net
+    restart: unless-stopped
+
+  # ── React Frontend (Nginx) ───────────────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend/ecorefund-ui
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api/v1
+    container_name: ecorefund-frontend
+    ports:
+      - "3000:80"     # Open http://localhost:3000
+    depends_on:
+      - api
+    networks:
+      - ecorefund-net
+    restart: unless-stopped
+
+volumes:
+  sqlserver_data:
+
+networks:
+  ecorefund-net:
+    driver: bridge
