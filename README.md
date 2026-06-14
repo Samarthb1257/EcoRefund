@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EcoRefund AI — Production-Grade Multi-Tenant SaaS Platform
 
 > **Waste Deposit, QR Tracking & Refund Platform for Zoos, Hospitals, Malls, Airports, Railways, Stadiums & Smart Cities**
@@ -445,3 +446,7 @@ Cash, UPI, Coupon Code, Digital Wallet, Bank Transfer
 ---
 
 *Built with Clean Architecture · CQRS · Multi-Tenant SaaS · JWT Security · QR Fraud Prevention*
+=======
+# EcoRefund
+Transforming plastic waste management through QR technology for efficient tracking, collection, and recycling.
+>>>>>>> 081b54ca6045455674807b122564f62d91a436c6
