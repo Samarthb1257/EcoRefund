@@ -30,4 +30,19 @@ export const organizationApi = {
     const res = await api.patch(`/organizations/${id}/toggle-active`, { isActive });
     return res.data;
   },
+
+  getPlatformStats: async () => {
+    const res = await api.get('/organizations/platform-stats');
+    return res.data;
+  },
+
+  update: async (id: string, data: Record<string, unknown>) => {
+    const res = await api.put(`/organizations/${id}`, data);
+    return res.data;
+  },
+
+  delete: async (id: string) => {
+    const res = await api.delete(`/organizations/${id}`);
+    return res.data;
+  },
 };

@@ -130,6 +130,21 @@ export interface QrCode {
   scanAttemptCount: number;
 }
 
+export interface WeeklyChartPoint {
+  day: string;
+  date: string;
+  deposits: number;
+  refunds: number;
+  depositAmount: number;
+  refundAmount: number;
+}
+
+export interface RefundMethodPoint {
+  method: string;
+  count: number;
+  amount: number;
+}
+
 export interface DashboardStats {
   activeItems: number;
   todayItems: number;
@@ -141,6 +156,25 @@ export interface DashboardStats {
   monthlyRefunds: number;
   fraudAttempts: number;
   activeStaff: number;
+  weeklyData?: WeeklyChartPoint[];
+  refundMethods?: RefundMethodPoint[];
+}
+
+export interface PlatformStats {
+  totalOrgs: number;
+  activeOrgs: number;
+  totalUsers: number;
+  activeUsers: number;
+  totalQrCodes: number;
+  totalRefunds: number;
+  todayItems: number;
+  todayRefunds: number;
+  totalDepositsCollected: number;
+  totalRefundsProcessed: number;
+  monthlyDeposits: number;
+  monthlyRefunds: number;
+  weeklyData: Array<{ day: string; date: string; deposits: number; refunds: number }>;
+  topOrgs: Array<{ orgName: string; amount: number; count: number }>;
 }
 
 export interface ScanQrResponse {

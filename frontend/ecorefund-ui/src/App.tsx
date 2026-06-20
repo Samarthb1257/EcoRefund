@@ -13,6 +13,7 @@ import { OrgAdminDashboard } from './pages/dashboards/OrgAdminDashboard';
 import { EntryStaffDashboard } from './pages/dashboards/EntryStaffDashboard';
 import { ExitStaffDashboard } from './pages/dashboards/ExitStaffDashboard';
 import { AuditorDashboard } from './pages/dashboards/AuditorDashboard';
+import { ManagerDashboard } from './pages/dashboards/ManagerDashboard';
 import { ReportsPage } from './pages/reports/ReportsPage';
 import { StaffAccessControl } from './pages/org-admin/StaffAccessControl';
 import { StaffManagement } from './pages/org-admin/StaffManagement';
@@ -82,7 +83,7 @@ function App() {
 
                 {/* Manager */}
                 <Route path="/manager/dashboard"
-                  element={<ProtectedRoute allowedRoles={[UserRole.Manager]}><OrgAdminDashboard /></ProtectedRoute>} />
+                  element={<ProtectedRoute allowedRoles={[UserRole.Manager]}><ManagerDashboard /></ProtectedRoute>} />
 
                 {/* Entry Staff */}
                 <Route path="/entry-staff/dashboard"
