@@ -32,6 +32,16 @@ export const userApi = {
     return res.data;
   },
 
+  update: async (id: string, data: Record<string, unknown>) => {
+    const res = await api.put(`/users/${id}`, data);
+    return res.data;
+  },
+
+  delete: async (id: string) => {
+    const res = await api.delete(`/users/${id}`);
+    return res.data;
+  },
+
   getLoginStatus: async () => {
     const res = await api.get('/users/login-status');
     return res.data;

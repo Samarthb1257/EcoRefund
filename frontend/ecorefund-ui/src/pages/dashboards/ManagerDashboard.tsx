@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Box, Card, CardContent, Grid, Typography, Button,
-  Chip, CircularProgress,
+  Box, Card, CardContent, Grid, Typography, Button, CircularProgress,
+  Chip,
 } from '@mui/material';
 import {
   QrCode, MonetizationOn, Recycling, PeopleAlt,
-  TrendingUp, Warning, QrCodeScanner, AddCircle,
+  Warning, QrCodeScanner, AddCircle, Assessment,
 } from '@mui/icons-material';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
@@ -43,7 +43,7 @@ const StatCard = ({ title, value, subtitle, icon, color }: {
   </Card>
 );
 
-export const OrgAdminDashboard = () => {
+export const ManagerDashboard = () => {
   const user = useSelector(selectUser);
   const navigate = useNavigate();
   const [stats, setStats] = useState<DashboardStats | null>(null);
@@ -78,9 +78,9 @@ export const OrgAdminDashboard = () => {
       {/* Header */}
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
         <Box>
-          <Typography variant="h5" fontWeight={700}>Dashboard</Typography>
+          <Typography variant="h5" fontWeight={700}>Manager Dashboard</Typography>
           <Typography variant="body2" color="text.secondary">
-            Welcome back, {user?.fullName} · {user?.organizationName}
+            {user?.organizationName} · Operational Overview
           </Typography>
         </Box>
         <Box display="flex" gap={1}>
@@ -101,20 +101,24 @@ export const OrgAdminDashboard = () => {
       {stats && (
         <Grid container spacing={2} mb={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard title="Active Items Today" value={stats.todayItems} subtitle={`${stats.activeItems} total active`}
+            <StatCard title="Items Registered Today" value={stats.todayItems}
+              subtitle={`${stats.activeItems} currently active`}
               icon={<QrCode />} color="#2E7D32" />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard title="Today's Refunds" value={stats.todayRefunds} subtitle={`${stats.totalRefunds} total`}
+            <StatCard title="Today's Refunds" value={stats.todayRefunds}
+              subtitle={`₹${stats.monthlyRefunds.toLocaleString()} this month`}
               icon={<Recycling />} color="#1976D2" />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <StatCard title="Monthly Deposits" value={`₹${stats.monthlyDeposits.toLocaleString()}`}
-              subtitle="This month" icon={<MonetizationOn />} color="#F57C00" />
+              subtitle={`₹${stats.totalDepositsCollected.toLocaleString()} total`}
+              icon={<MonetizationOn />} color="#F57C00" />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard title="Fraud Attempts" value={stats.fraudAttempts}
-              subtitle="Blocked by system" icon={<Warning />} color="#C62828" />
+            <StatCard title="Active Staff" value={stats.activeStaff}
+              subtitle={`${stats.fraudAttempts} fraud attempts blocked`}
+              icon={<Warning />} color="#C62828" />
           </Grid>
         </Grid>
       )}
@@ -184,10 +188,10 @@ export const OrgAdminDashboard = () => {
           <Typography variant="h6" fontWeight={600} mb={2}>Quick Actions</Typography>
           <Grid container spacing={2}>
             {[
-              { label: 'Manage Staff', icon: <PeopleAlt />, path: '/org-admin/staff', color: '#1976D2' },
-              { label: 'Staff Access Control', icon: <PeopleAlt />, path: '/org-admin/staff-access', color: '#7B1FA2' },
-              { label: 'View Refunds', icon: <Recycling />, path: '/reports/refunds', color: '#2E7D32' },
-              { label: 'Download Report', icon: <TrendingUp />, path: '/reports/refunds', color: '#F57C00' },
+              { label: 'View Staff', icon: <PeopleAlt />, path: '/org-admin/staff', color: '#1976D2' },
+              { label: 'Deposits Report', icon: <Assessment />, path: '/reports/deposits', color: '#2E7D32' },
+              { label: 'Refunds Report', icon: <Recycling />, path: '/reports/refunds', color: '#7B1FA2' },
+              { label: 'Audit Logs', icon: <Assessment />, path: '/reports/audit', color: '#F57C00' },
             ].map(a => (
               <Grid item xs={6} md={3} key={a.label}>
                 <Button fullWidth variant="outlined" startIcon={a.icon}

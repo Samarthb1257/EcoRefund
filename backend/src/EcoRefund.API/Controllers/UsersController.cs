@@ -47,6 +47,7 @@ public class UsersController : BaseController
 
         var query = _context.Users
             .Include(u => u.AssignedLocation)
+            .Include(u => u.Organization)
             .Where(u => orgId == null || u.OrganizationId == orgId)
             .OrderBy(u => u.FirstName)
             .AsQueryable();
@@ -75,6 +76,9 @@ public class UsersController : BaseController
                 u.IsActive,
                 u.IsLoginEnabled,
                 u.LastLoginAt,
+                u.OrganizationId,
+                OrganizationName = u.Organization != null ? u.Organization.OrganizationName : null,
+                OrganizationCode = u.Organization != null ? u.Organization.OrganizationCode : null,
                 u.AssignedLocationId,
                 AssignedLocationName = u.AssignedLocation != null ? u.AssignedLocation.LocationName : null,
                 u.CreatedAt
@@ -172,6 +176,72 @@ public class UsersController : BaseController
         return Ok(new { success = true, message = "Password reset successfully. User must login again." });
     }
 
+    /// <summary>Edit user profile (SuperAdmin or OrgAdmin for own org staff)</summary>
+    [HttpPut("{id}")]
+    [Authorize(Roles = "SuperAdmin,OrgAdmin")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdateUserDto dto, CancellationToken ct)
+    {
+        var orgId = _currentUser.IsOrgAdmin ? _currentUser.OrganizationId : null;
+        var user = await _context.Users
+            .FirstOrDefaultAsync(u => u.Id == id && (orgId == null || u.OrganizationId == orgId), ct);
+
+        if (user == null) return NotFound(new { success = false, message = "User not found." });
+
+        if (_currentUser.IsOrgAdmin && user.Role is UserRole.SuperAdmin or UserRole.OrgAdmin)
+            return BadRequest(new { success = false, message = "Cannot edit admin accounts." });
+
+        if (!string.IsNullOrWhiteSpace(dto.FirstName)) user.FirstName = dto.FirstName;
+        if (!string.IsNullOrWhiteSpace(dto.LastName))  user.LastName  = dto.LastName;
+        if (dto.Phone != null)                          user.Phone     = dto.Phone;
+
+        if (!string.IsNullOrWhiteSpace(dto.Email) && dto.Email != user.Email)
+        {
+            var emailExists = await _context.Users
+                .AnyAsync(u => u.Email == dto.Email && u.Id != id, ct);
+            if (emailExists)
+                return BadRequest(new { success = false, message = "Email already in use by another account." });
+            user.Email = dto.Email;
+        }
+
+        if (dto.Role.HasValue)
+        {
+            if (_currentUser.IsOrgAdmin && dto.Role.Value is UserRole.SuperAdmin or UserRole.OrgAdmin)
+                return BadRequest(new { success = false, message = "Cannot assign admin role." });
+            user.Role = dto.Role.Value;
+        }
+
+        user.UpdatedAt = DateTime.UtcNow;
+        await _context.SaveChangesAsync(ct);
+        return Ok(new { success = true, message = "User updated successfully." });
+    }
+
+    /// <summary>Soft-delete a user (SuperAdmin or OrgAdmin for own org staff)</summary>
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "SuperAdmin,OrgAdmin")]
+    public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
+    {
+        var orgId = _currentUser.IsOrgAdmin ? _currentUser.OrganizationId : null;
+        var user = await _context.Users
+            .FirstOrDefaultAsync(u => u.Id == id && (orgId == null || u.OrganizationId == orgId), ct);
+
+        if (user == null) return NotFound(new { success = false, message = "User not found." });
+
+        if (_currentUser.IsOrgAdmin && user.Role is UserRole.SuperAdmin or UserRole.OrgAdmin)
+            return BadRequest(new { success = false, message = "Cannot delete admin accounts." });
+
+        if (user.Id == _currentUser.UserId)
+            return BadRequest(new { success = false, message = "Cannot delete your own account." });
+
+        user.IsDeleted     = true;
+        user.DeletedAt     = DateTime.UtcNow;
+        user.IsActive      = false;
+        user.IsLoginEnabled = false;
+        user.RefreshToken  = null;
+        await _context.SaveChangesAsync(ct);
+
+        return Ok(new { success = true, message = "User deleted successfully." });
+    }
+
     /// <summary>Get staff login status overview (OrgAdmin dashboard feature)</summary>
     [HttpGet("login-status")]
     [Authorize(Roles = "SuperAdmin,OrgAdmin")]
@@ -209,3 +279,11 @@ public class ToggleLoginAccessDto
 
 public class ToggleActiveUserDto { public bool IsActive { get; set; } }
 public class ResetPasswordDto { public string NewPassword { get; set; } = string.Empty; }
+public class UpdateUserDto
+{
+    public string?   FirstName { get; set; }
+    public string?   LastName  { get; set; }
+    public string?   Email     { get; set; }
+    public string?   Phone     { get; set; }
+    public UserRole? Role      { get; set; }
+}
