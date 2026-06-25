@@ -48,8 +48,8 @@ public class RefundsController : BaseController
             .Where(r => orgId == null || r.OrganizationId == orgId)
             .AsQueryable();
 
-        if (from.HasValue) query = query.Where(r => r.ProcessedAt >= from.Value);
-        if (to.HasValue) query = query.Where(r => r.ProcessedAt <= to.Value);
+        if (from.HasValue) query = query.Where(r => r.ProcessedAt >= from.Value.Date);
+        if (to.HasValue)   query = query.Where(r => r.ProcessedAt < to.Value.Date.AddDays(1));
 
         var total = await query.CountAsync(ct);
         var items = await query
@@ -80,12 +80,12 @@ public class RefundsController : BaseController
     public async Task<IActionResult> GetSummary([FromQuery] DateTime? from = null, [FromQuery] DateTime? to = null, CancellationToken ct = default)
     {
         var orgId = _currentUser.IsSuperAdmin ? (Guid?)null : _currentUser.OrganizationId;
-        var fromDate = from ?? DateTime.UtcNow.AddDays(-30);
-        var toDate = to ?? DateTime.UtcNow;
+        var fromDate = (from ?? DateTime.UtcNow.AddDays(-30)).Date;
+        var toDate   = (to   ?? DateTime.UtcNow).Date.AddDays(1);
 
         var refunds = _context.Refunds
             .Where(r => (orgId == null || r.OrganizationId == orgId) &&
-                        r.ProcessedAt >= fromDate && r.ProcessedAt <= toDate);
+                        r.ProcessedAt >= fromDate && r.ProcessedAt < toDate);
 
         var summary = new
         {

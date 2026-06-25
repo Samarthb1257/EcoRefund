@@ -10,12 +10,13 @@ import {
 import {
   Business, PeopleAlt, CheckCircle, PersonAdd,
   LockOpen, Refresh, Dashboard, FilterAlt,
-  Edit, Delete, Close,
+  Edit, Delete, Close, TrendingUp, QrCode, Recycling,
 } from '@mui/icons-material';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartTooltip,
   ResponsiveContainer, Legend,
 } from 'recharts';
+import { DashboardStats } from '../../types';
 import { organizationApi } from '../../api/organizationApi';
 import { userApi } from '../../api/userApi';
 import { Organization, UserRole, PlatformStats } from '../../types';
@@ -104,6 +105,11 @@ export const SuperAdminDashboard = () => {
   // Delete user dialog
   const [deleteUserTarget, setDeleteUserTarget] = useState<UserRow | null>(null);
   const [deletingUser, setDeletingUser]         = useState(false);
+
+  // Org performance dialog
+  const [perfOrg, setPerfOrg]         = useState<Organization | null>(null);
+  const [perfStats, setPerfStats]     = useState<DashboardStats | null>(null);
+  const [loadingPerf, setLoadingPerf] = useState(false);
 
   const loadStats = useCallback(() => {
     organizationApi.getPlatformStats()
@@ -293,6 +299,16 @@ export const SuperAdminDashboard = () => {
     } finally { setCreating(false); }
   };
 
+  const openPerf = async (org: Organization) => {
+    setPerfOrg(org);
+    setPerfStats(null);
+    setLoadingPerf(true);
+    try {
+      const res = await organizationApi.getDashboard(org.id);
+      if (res.success) setPerfStats(res.data);
+    } finally { setLoadingPerf(false); }
+  };
+
   const filteredUsers    = selectedOrgId ? users.filter(u => u.organizationId === selectedOrgId) : users;
   const selectedOrgName  = selectedOrgId ? orgs.find(o => o.id === selectedOrgId)?.organizationName : null;
 
@@ -452,6 +468,7 @@ export const SuperAdminDashboard = () => {
                       <TableCell><strong>Active</strong></TableCell>
                       <TableCell><strong>Login Access</strong></TableCell>
                       <TableCell><strong>Created</strong></TableCell>
+                      <TableCell align="center"><strong>Performance</strong></TableCell>
                       <TableCell align="center"><strong>Actions</strong></TableCell>
                     </TableRow>
                   </TableHead>
@@ -480,6 +497,16 @@ export const SuperAdminDashboard = () => {
                           <Typography variant="caption" color="text.secondary">
                             {new Date(org.createdAt).toLocaleDateString('en-IN')}
                           </Typography>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Tooltip title="View Performance">
+                            <Button size="small" variant="outlined" startIcon={<TrendingUp />}
+                              onClick={() => openPerf(org)}
+                              sx={{ borderColor: '#7B1FA2', color: '#7B1FA2', fontSize: 11,
+                                    '&:hover': { bgcolor: '#F3E5F5' } }}>
+                              View
+                            </Button>
+                          </Tooltip>
                         </TableCell>
                         <TableCell align="center">
                           <Tooltip title="Edit Organization">
@@ -782,6 +809,108 @@ export const SuperAdminDashboard = () => {
             sx={{ bgcolor: '#C62828', '&:hover': { bgcolor: '#B71C1C' } }}>
             {deletingUser ? <CircularProgress size={20} color="inherit" /> : 'Delete User'}
           </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* ── Org Performance Dialog ── */}
+      <Dialog open={!!perfOrg} onClose={() => { setPerfOrg(null); setPerfStats(null); }} maxWidth="md" fullWidth>
+        <DialogTitle sx={{ fontWeight: 700, display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          background: 'linear-gradient(135deg,#2E7D32,#1B5E20)', color: '#fff' }}>
+          <Box>
+            <Typography variant="h6" fontWeight={700}>{perfOrg?.organizationName}</Typography>
+            <Typography variant="caption" sx={{ opacity: 0.8 }}>{perfOrg?.organizationCode} · Performance Overview</Typography>
+          </Box>
+          <IconButton onClick={() => { setPerfOrg(null); setPerfStats(null); }} sx={{ color: '#fff' }}><Close /></IconButton>
+        </DialogTitle>
+        <DialogContent sx={{ pt: 3 }}>
+          {loadingPerf ? (
+            <Box display="flex" justifyContent="center" py={6}><CircularProgress /></Box>
+          ) : perfStats ? (
+            <Box>
+              {/* Stat cards */}
+              <Grid container spacing={2} mb={3}>
+                {[
+                  { label: 'Active Items',      value: perfStats.activeItems,     color: '#2E7D32', icon: <QrCode /> },
+                  { label: 'Total Refunds',     value: perfStats.totalRefunds,    color: '#1976D2', icon: <Recycling /> },
+                  { label: 'Monthly Deposits',  value: `₹${perfStats.monthlyDeposits.toLocaleString()}`,  color: '#F57C00', icon: <TrendingUp /> },
+                  { label: 'Monthly Refunds',   value: `₹${perfStats.monthlyRefunds.toLocaleString()}`,   color: '#7B1FA2', icon: <TrendingUp /> },
+                  { label: 'Active Staff',      value: perfStats.activeStaff,     color: '#00838F', icon: <PeopleAlt /> },
+                  { label: 'Fraud Attempts',    value: perfStats.fraudAttempts,   color: '#C62828', icon: <CheckCircle /> },
+                ].map(s => (
+                  <Grid item xs={6} md={4} key={s.label}>
+                    <Card elevation={0} sx={{ border: '1px solid #E0E0E0', borderRadius: 2 }}>
+                      <CardContent sx={{ py: 1.5 }}>
+                        <Box display="flex" justifyContent="space-between" alignItems="center">
+                          <Box>
+                            <Typography variant="caption" color="text.secondary">{s.label}</Typography>
+                            <Typography variant="h5" fontWeight={700} sx={{ color: s.color }}>{s.value}</Typography>
+                          </Box>
+                          <Box sx={{ color: s.color, bgcolor: `${s.color}15`, borderRadius: 2, p: 1 }}>{s.icon}</Box>
+                        </Box>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+
+              {/* Weekly chart */}
+              {perfStats.weeklyData && perfStats.weeklyData.length > 0 && (
+                <Card elevation={0} sx={{ border: '1px solid #E0E0E0', borderRadius: 2, mb: 2 }}>
+                  <CardContent>
+                    <Typography variant="h6" fontWeight={600} mb={2}>Weekly Activity (Last 7 Days)</Typography>
+                    {perfStats.weeklyData.every(d => d.deposits === 0 && d.refunds === 0) ? (
+                      <Box display="flex" alignItems="center" justifyContent="center" height={180}>
+                        <Typography color="text.secondary">No activity in the last 7 days</Typography>
+                      </Box>
+                    ) : (
+                      <ResponsiveContainer width="100%" height={200}>
+                        <BarChart data={perfStats.weeklyData}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="#F5F5F5" />
+                          <XAxis dataKey="day" tick={{ fontSize: 12 }} />
+                          <YAxis tick={{ fontSize: 12 }} allowDecimals={false} />
+                          <RechartTooltip />
+                          <Legend />
+                          <Bar dataKey="deposits" fill="#2E7D32" name="Deposits" radius={[3, 3, 0, 0]} />
+                          <Bar dataKey="refunds"  fill="#1976D2" name="Refunds"  radius={[3, 3, 0, 0]} />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Totals row */}
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <Card elevation={0} sx={{ border: '1px solid #E0E0E0', borderRadius: 2, bgcolor: '#E8F5E9' }}>
+                    <CardContent sx={{ py: 1.5 }}>
+                      <Typography variant="caption" color="text.secondary">Total Deposits Collected (All Time)</Typography>
+                      <Typography variant="h5" fontWeight={700} color="#2E7D32">
+                        ₹{perfStats.totalDepositsCollected.toLocaleString()}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item xs={6}>
+                  <Card elevation={0} sx={{ border: '1px solid #E0E0E0', borderRadius: 2, bgcolor: '#E3F2FD' }}>
+                    <CardContent sx={{ py: 1.5 }}>
+                      <Typography variant="caption" color="text.secondary">Total Refunds Processed (All Time)</Typography>
+                      <Typography variant="h5" fontWeight={700} color="#1976D2">
+                        ₹{perfStats.totalRefundsProcessed.toLocaleString()}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              </Grid>
+            </Box>
+          ) : (
+            <Box textAlign="center" py={4}>
+              <Typography color="text.secondary">No data available for this organization yet.</Typography>
+            </Box>
+          )}
+        </DialogContent>
+        <DialogActions sx={{ p: 2 }}>
+          <Button onClick={() => { setPerfOrg(null); setPerfStats(null); }} variant="outlined">Close</Button>
         </DialogActions>
       </Dialog>
     </Box>

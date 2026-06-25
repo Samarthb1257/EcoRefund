@@ -19,6 +19,14 @@ import { qrApi } from '../../api/qrApi';
 const fmtDate  = (d: string) => new Date(d).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' });
 const fmtMoney = (n: number) => `₹${n.toLocaleString('en-IN')}`;
 
+const downloadExcel = async (endpoint: string, filename: string) => {
+  const res = await api.get(endpoint, { responseType: 'blob' });
+  const url = URL.createObjectURL(new Blob([res.data]));
+  const a   = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  URL.revokeObjectURL(url);
+};
+
 const statusColor = (s: string) => {
   const m: Record<string, string> = {
     Active: '#2E7D32', Refunded: '#1976D2', Generated: '#F57C00',
@@ -109,17 +117,8 @@ const DepositsTab = ({ from, to, onDateChange }: { from: string; to: string; onD
 
   useEffect(() => { load(); }, [load]);
 
-  const exportExcel = () => {
-    const url = `/api/v1/reports/deposits/excel?from=${from}&to=${to}`;
-    const token = localStorage.getItem('accessToken');
-    fetch(url, { headers: { Authorization: `Bearer ${token}` } })
-      .then(r => r.blob()).then(blob => {
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = `Deposits-${from}-${to}.xlsx`;
-        a.click();
-      });
-  };
+  const exportExcel = () =>
+    downloadExcel(`/reports/deposits/excel?from=${from}&to=${to}`, `Deposits-${from}-${to}.xlsx`);
 
   return (
     <Box>
@@ -216,17 +215,8 @@ const RefundsTab = ({ from, to, onDateChange }: { from: string; to: string; onDa
 
   useEffect(() => { load(); }, [load]);
 
-  const exportExcel = () => {
-    const token = localStorage.getItem('accessToken');
-    fetch(`/api/v1/reports/refunds/excel?from=${from}&to=${to}`,
-      { headers: { Authorization: `Bearer ${token}` } })
-      .then(r => r.blob()).then(blob => {
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = `Refunds-${from}-${to}.xlsx`;
-        a.click();
-      });
-  };
+  const exportExcel = () =>
+    downloadExcel(`/reports/refunds/excel?from=${from}&to=${to}`, `Refunds-${from}-${to}.xlsx`);
 
   const methodColors: Record<string, string> = {
     Cash: '#2E7D32', UPI: '#1976D2', Coupon: '#F57C00',
@@ -440,17 +430,8 @@ const AuditTab = ({ from, to, onDateChange }: { from: string; to: string; onDate
 
   useEffect(() => { load(); }, [load]);
 
-  const exportExcel = () => {
-    const token = localStorage.getItem('accessToken');
-    fetch(`/api/v1/reports/audit/excel?from=${from}&to=${to}`,
-      { headers: { Authorization: `Bearer ${token}` } })
-      .then(r => r.blob()).then(blob => {
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = `AuditLog-${from}-${to}.xlsx`;
-        a.click();
-      });
-  };
+  const exportExcel = () =>
+    downloadExcel(`/reports/audit/excel?from=${from}&to=${to}`, `AuditLog-${from}-${to}.xlsx`);
 
   return (
     <Box>

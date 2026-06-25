@@ -17,6 +17,7 @@ import { ManagerDashboard } from './pages/dashboards/ManagerDashboard';
 import { ReportsPage } from './pages/reports/ReportsPage';
 import { StaffAccessControl } from './pages/org-admin/StaffAccessControl';
 import { StaffManagement } from './pages/org-admin/StaffManagement';
+import { LocationsPage } from './pages/org-admin/LocationsPage';
 import { GenerateQr } from './pages/entry-staff/GenerateQr';
 import { ScanAndRefund } from './pages/exit-staff/ScanAndRefund';
 import { UserRole } from './types';
@@ -79,7 +80,7 @@ function App() {
                 <Route path="/org-admin/staff"
                   element={<ProtectedRoute allowedRoles={[UserRole.OrgAdmin, UserRole.Manager]}><StaffManagement /></ProtectedRoute>} />
                 <Route path="/org-admin/locations"
-                  element={<ProtectedRoute allowedRoles={[UserRole.OrgAdmin]}><OrgAdminDashboard /></ProtectedRoute>} />
+                  element={<ProtectedRoute allowedRoles={[UserRole.OrgAdmin, UserRole.Manager]}><LocationsPage /></ProtectedRoute>} />
 
                 {/* Manager */}
                 <Route path="/manager/dashboard"
