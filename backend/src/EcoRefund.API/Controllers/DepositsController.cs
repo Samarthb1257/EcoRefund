@@ -35,8 +35,8 @@ public class DepositsController : BaseController
             .Where(d => orgId == null || d.OrganizationId == orgId)
             .AsQueryable();
 
-        if (from.HasValue) query = query.Where(d => d.CollectedAt >= from.Value);
-        if (to.HasValue)   query = query.Where(d => d.CollectedAt <= to.Value);
+        if (from.HasValue) query = query.Where(d => d.CollectedAt >= from.Value.Date);
+        if (to.HasValue)   query = query.Where(d => d.CollectedAt < to.Value.Date.AddDays(1));
 
         var total = await query.CountAsync(ct);
         var items = await query
@@ -69,12 +69,12 @@ public class DepositsController : BaseController
         CancellationToken ct = default)
     {
         var orgId = _currentUser.IsSuperAdmin ? (Guid?)null : _currentUser.OrganizationId;
-        var fromDate = from ?? DateTime.UtcNow.AddDays(-30);
-        var toDate   = to   ?? DateTime.UtcNow;
+        var fromDate = (from ?? DateTime.UtcNow.AddDays(-30)).Date;
+        var toDate   = (to   ?? DateTime.UtcNow).Date.AddDays(1);
 
         var deposits = _context.Deposits
             .Where(d => (orgId == null || d.OrganizationId == orgId) &&
-                        d.CollectedAt >= fromDate && d.CollectedAt <= toDate);
+                        d.CollectedAt >= fromDate && d.CollectedAt < toDate);
 
         var summary = new
         {

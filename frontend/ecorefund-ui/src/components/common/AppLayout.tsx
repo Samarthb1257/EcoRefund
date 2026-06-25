@@ -7,8 +7,8 @@ import {
 } from '@mui/material';
 import {
   Menu as MenuIcon, Dashboard, QrCode, QrCodeScanner,
-  PeopleAlt, Business, Assessment, LocationOn, ExitToApp,
-  Security, MonetizationOn, BarChart, AdminPanelSettings,
+  PeopleAlt, Business, LocationOn, ExitToApp,
+  Security, AdminPanelSettings, BarChart,
 } from '@mui/icons-material';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../store/authSlice';
@@ -79,27 +79,9 @@ export const AppLayout = () => {
       visible: perms.canScanQr,
     },
     {
-      label: 'Deposits',
-      icon: <MonetizationOn />,
-      path: '/reports/deposits',
-      visible: perms.canViewReports,
-    },
-    {
-      label: 'Refunds',
-      icon: <Assessment />,
-      path: '/reports/refunds',
-      visible: perms.canViewReports,
-    },
-    {
-      label: 'QR Codes',
-      icon: <QrCode />,
-      path: '/reports/qr-codes',
-      visible: perms.canViewReports,
-    },
-    {
-      label: 'Audit Logs',
+      label: 'Reports & Analytics',
       icon: <BarChart />,
-      path: '/reports/audit',
+      path: '/reports/deposits',
       visible: perms.canViewReports,
     },
     {
